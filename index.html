@@ -11,7 +11,7 @@
     <div class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center">
      <!---search area-->
      <div class="relative w-full">
-       <input type="text" id="search" class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full" placeholder="search products">
+       <input type="text" id="search" class="bg-gray-700 rounded-full p-2 pl-10 transition-transform focus:w-full" placeholder="search products..."/>
       <svg
             class="absolute left-2 top-1/2 -translate-y-1/2"
             xmlns="http://www.w3.org/2000/svg"
@@ -27,11 +27,44 @@
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
             <path d="M21 21l-6 -6" />
-          </svg>
+          </svg> 
      </div>
-     <!--cart icon-->      
+      <!-- Cart Icon with Count -->
+<div class="relative text-center w-fit">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="28" height="28"
+       fill="currentColor"
+       class="bi bi-cart"
+       viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+  </svg>
+  <span id="cart-count"
+        class="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-[10px] px-1.5 py-[1px]">0</span>
+</div>
     </div>
   </nav>
+  <main class="flex flex-col sm:flex-row  container mx-auto max-w-6xl ">
+  <div class="space-y-4 p-2 w-full max-w-[10rem]">
+    <h2 class="text-2xl">Filters</h2>
+    <h3 class="text-xl">Category</h3>
+    <div id="filters-container" class="text-xl space-y-2">
+  <div> <input type="checkbox" class="check" id="cameras"/>
+    <label for="cameras">Cameras</label></div> 
+  <div><input type="checkbox" class="check" id="smartphones"/>
+    <label for="smartphones">Smartphones</label></div>  
   
+  <div><input type="checkbox" class="check" id="games"/>
+    <label for="games">Games</label></div>
+    
+  <div><input type="checkbox" class="check" id="telivisions"/>
+    <label for="telivisions">Telivisions</label></div>
+  </div>
+  </div>
+  <!---product wrapper-->
+  <div id="product-wrapper" class="w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">
+    
+  </div>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
